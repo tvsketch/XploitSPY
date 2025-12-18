@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Debug APK
         working-directory: client
-        run: ./gradlew assembleDebug
+        run: bash ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
