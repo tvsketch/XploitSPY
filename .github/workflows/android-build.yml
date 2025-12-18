@@ -20,6 +20,9 @@ jobs:
       - name: Grant Gradle permission
         run: chmod +x client/gradlew
 
+      - name: Fix gradlew line endings
+        run: sed -i 's/\r$//' client/gradlew
+
       - name: Build Debug APK
         working-directory: client
         run: bash ./gradlew assembleDebug
